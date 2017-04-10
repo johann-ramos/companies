@@ -1,0 +1,10 @@
+version: '2'
+services:
+  app:
+    build: .
+    command: ember s --proxy http://0.0.0.0:3000
+    volumes:
+      - .:/companies
+    ports:
+      - "4200:4200"
+    env_file: .env

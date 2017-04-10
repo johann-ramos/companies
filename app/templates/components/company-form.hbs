@@ -1,0 +1,25 @@
+<div class="col-md-4">
+    <form {{action 'save' on="submit"}} >
+        <dl>
+            <dt>Name: {{ input value=model.name id='name' }}</dt>
+        </dl>
+        <dl>
+            <dt>Address: {{ input value=model.address id='address' }}</dt>
+        </dl>
+        <dl>
+            <dt>City: {{ input value=model.city id='city' }}</dt>
+        </dl>
+        <dl>
+            <dt>Country: {{ input value=model.country id='country' }}</dt>
+        </dl>
+        <dl>
+            <dt>Email: {{ input value=model.email id='email' }}</dt>
+        </dl>
+        <dl>
+            <dt>Phone: {{ input value=model.phone id='phone' }}</dt>
+        </dl>
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,21 @@
+<h2> New Board</h2>
+<div class="col-md-4">
+    <form {{action 'save' on='submit'}} >
+        <div class="form-group">
+            {{#x-select id='company-select' on-change=(action 'setCompany') as |xs|}}
+                {{#each companies as |company|}}
+                    {{#xs.option value=company.id}}{{company.name}}{{/xs.option}}
+                {{/each}}
+            {{/x-select}}
+
+            {{#x-select id='owner-select' on-change=(action 'setOwner') as |xs|}}
+                {{#each owners as |owner|}}
+                    {{#xs.option value=owner.id}}{{owner.name}}{{/xs.option}}
+                {{/each}}
+            {{/x-select}}
+        </div>
+        <div class="row">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </form>
+</div>

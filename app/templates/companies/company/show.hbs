@@ -1,0 +1,10 @@
+<div class="companies-block">
+    <span class="name">{{model.name}}</span>
+    <span class="address">{{model.address}}</span>
+    <span class="city">{{model.city}}</span>
+    <span class="country">{{model.country}}</span>
+    <span class="email">{{model.email}}</span>
+    <span class="phone">{{model.phone}}</span>
+</div>
+<button {{action 'destroyCompany'}}>Destroy Owner</button>
+{{#link-to 'companies.company.edit' model tagName="button"}}Edit Company{{/link-to}}

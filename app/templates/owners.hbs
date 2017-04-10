@@ -1,0 +1,21 @@
+<h3>Owners</h3>
+<div class="row">
+    <div class="col-sm-4 col-xs-6">
+        {{#link-to 'owners.new' tagName='button'}}New Owner{{/link-to}}
+        <ul class="owners-index-list">
+            {{#each model as |owner|}}
+                {{#link-to 'owners.owner.show' owner  tagName='li' class="owner list-unstyled"}}
+
+                    {{#if owner.companies}}
+                      {{owner.name}} - {{owner.companies}}
+                    {{else}}
+                      {{owner.name}}
+                    {{/if}}
+                {{/link-to}}
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-sm-8 col-xs-6">
+        {{outlet}}
+    </div>
+</div>

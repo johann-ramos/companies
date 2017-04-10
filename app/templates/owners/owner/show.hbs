@@ -1,0 +1,5 @@
+<div class="owners-block">
+    <span class="name">{{model.name}}</span>
+</div>
+<button {{action 'destroyOwner'}}>Destroy Owner</button>
+{{#link-to 'owners.owner.edit' model tagName="button"}}Edit Owner{{/link-to}}

@@ -1,0 +1,10 @@
+.git
+.dockerignore
+.env
+.byebug_history
+log/*
+tmp/*
+node_modules
+README.rdoc
+Dockerfile
+docker-compose.yml

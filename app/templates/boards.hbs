@@ -1,0 +1,21 @@
+<h3>Boards</h3>
+<div class="row">
+    <div class="col-sm-4 col-xs-6">
+        <ul class="owners-index-list">
+            {{#each model as |board|}}
+                <li>
+                    <b>{{board.company_name}}</b>
+                </li>
+                <ul>
+                    {{#link-to 'boards.board.show' board  tagName='li' class="board list-unstyled"}}
+                        {{board.owner_name}}
+                    {{/link-to}}
+                </ul>
+                <br>
+            {{/each}}
+        </ul>
+    </div>
+    <div class="col-sm-8 col-xs-6">
+        {{outlet}}
+    </div>
+</div>
